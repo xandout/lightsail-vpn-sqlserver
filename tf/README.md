@@ -1,6 +1,6 @@
 # Terraform
 
-# It is NOT required to use this TF as long as you have 2 LS VMs to point ansible at.  This is just a helper project.
+# It is NOT required to use this TF as long as you have 2 Ubuntu 18.04 VMs to point ansible at.  This is just a helper project.
 
 ## Issues!!!
 
