@@ -10,7 +10,7 @@ See [tf/README.md](tf/README.md) for notes and issues.
 
 The [ansible](./ansible) directory contains the Ansible files to provision OpenVPN and MS SQL Server to Ubuntu 18.04 VMs.
 
-See [ansible/README.md](tf/README.md) for notes and issues.
+See [ansible/README.md](ansible/README.md) for notes and issues.
 
 ## Docker
 
