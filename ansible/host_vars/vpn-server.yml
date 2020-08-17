@@ -1,0 +1,4 @@
+# Add VPN clients here. Revocation is broken in the upstream repo /shrug
+vpn_clients:
+  - demo_user
+sql_server_ip: 172.26.17.17 # Private IP of the SQL server VM. Get this from Lightsail UI

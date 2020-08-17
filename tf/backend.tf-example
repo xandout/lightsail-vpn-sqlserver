@@ -1,0 +1,15 @@
+variable "aws-region" {
+  default = "us-east-1"
+}
+terraform {
+  backend "s3" {
+    bucket = "SET_THESE_VARS_NOT_ALLOWED"
+    key    = "SET_THESE_VARS_NOT_ALLOWED"
+    region = "SET_THESE_VARS_NOT_ALLOWED"
+    encrypt = "true"
+  }
+}
+
+provider "aws" {
+  region = "${var.aws-region}"
+}

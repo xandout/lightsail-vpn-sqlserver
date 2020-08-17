@@ -1,0 +1,6 @@
+all:
+  hosts:
+    vpn-server:
+      ansible_host: 34.199.193.197
+    sql-server:
+      ansible_host: 50.19.168.174

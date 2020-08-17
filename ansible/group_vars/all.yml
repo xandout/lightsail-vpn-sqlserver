@@ -1,0 +1,3 @@
+ansible_user: ubuntu
+# Set the path to your SSH key here or delete this line and ssh-add the key
+ansible_ssh_private_key_file: ../terraform/generated_data/ls_vpn_sql_kp.pem

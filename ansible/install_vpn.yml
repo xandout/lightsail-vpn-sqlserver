@@ -1,0 +1,34 @@
+---
+- hosts: vpn-server
+  serial: 1
+  tasks:
+  - name: Run the equivalent of "apt-get update" as a separate step
+    apt:
+      update_cache: yes
+    become: yes
+    changed_when: false
+  - name: Create a symbolic link for python(needed by openvpn role)
+    file:
+      src: /usr/bin/python3
+      dest: /usr/bin/python
+      state: link
+    become: yes
+  - name: "Upgrade all packages to the latest version"
+    apt:
+      name: "*"
+      state: latest
+    become: yes
+  - name: Import openvpn role, setting VPN server address to {{ ansible_host }}
+    import_role: 
+      name: kyl191.openvpn
+    vars: 
+      openvpn_redirect_gateway: false # This disables full-tunnel
+      openvpn_server_hostname: "{{ ansible_host }}"
+      openvpn_dualstack: false
+      openvpn_client_register_dns: false #set to true for windows clients
+      openvpn_server_network: "{{ open_vpn_server_network | d('10.9.0.0') }}" # role deafult if not set in host_vars/vpn-server.yml
+      clients: "{{ vpn_clients }}"
+      openvpn_fetch_config_dir: ./remote_files/vpn/configs
+      openvpn_push:
+        - route {{ sql_server_ip }} 255.255.255.255
+    become: yes
