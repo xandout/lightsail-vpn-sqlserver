@@ -12,7 +12,7 @@ To remedy this, I have a prefix and suffix.
 
 If you get the same error, I was able to comment out the IPs and it would work sometimes.
 
-I think this is an API issue with AWS LS but Google has 0 usefule results.
+I think this is an API issue with AWS LS but Google has 0 useful results.
 
 ## Running TF
 

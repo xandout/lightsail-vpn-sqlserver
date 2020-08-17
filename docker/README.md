@@ -11,7 +11,7 @@ docker build -t sqlcmd .
 You'll need the SQL Server's private IP address
 
 ```
-docker run --rm -it -v $PWD/../ansble/remote_files:/remote sqlcmd
+docker run --rm -it -v $PWD/../ansble/remote_files:/remote sqlcmd bash
 # Inside docker container
 openvpn /remote/remote_files/vpn/configs/demo_user/vpn-server.ovpn &
 /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER_PRIVATE_IP -U SA
