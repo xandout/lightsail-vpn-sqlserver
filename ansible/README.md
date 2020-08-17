@@ -45,4 +45,4 @@ You can connect to the DB server from the SQL Server VM by running
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA 
 ```
 
-You can connect to the DB server via VPN by importing the VPN profile into your client or by using the [instructions for the docker file](docker/README.md).
+You can connect to the DB server via VPN by importing the VPN profile into your client or by using the [instructions for the docker file](../docker/README.md).
